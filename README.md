@@ -37,7 +37,7 @@ A high-performance, glassmorphic developer portfolio merging genetic algorithmic
    ```bash
    git clone https://github.com/sike-developer/dna-helix-portfolio.git
 
-````
+```
 
 2. **Navigate to Directory**
     
