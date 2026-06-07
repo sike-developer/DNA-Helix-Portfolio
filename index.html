@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIKE | Interactive Portfolio</title>
+    <meta name="description"
+        content="SIKE's premium dynamic interactive developer portfolio featuring responsive design, glassmorphic layout, and custom DNA canvas scroll effects.">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+    <!-- Background Layers -->
+    <canvas id="dna-canvas"></canvas>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation Header -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="#hero" class="nav-logo">
+                <i class="fa-solid fa-dna"></i> SIKE<span>.</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container hero-content">
+                <div class="hero-subtitle reveal">
+                    <i class="fa-solid fa-bolt"></i> Available for Freelance & Contracts
+                </div>
+                <h1 class="hero-title reveal">
+                    Constructing <span class="gradient-text">Beautiful</span> Digital Codes.
+                </h1>
+                <p class="hero-description reveal">
+                    I design and program ultra-premium, high-performance interactive web experiences. Merging genetic
+                    algorithmic visual art with robust modern technology.
+                </p>
+                <div class="hero-buttons reveal">
+                    <a href="#projects" class="btn btn-primary">
+                        Explore Work <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-indicator reveal">
+                <span>Scroll Down</span>
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-num">01 / CONCEPT</span>
+                    <h2 class="section-title">The Philosophy</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text glass-card reveal">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;" class="gradient-text">Blending Art &
+                            Technology</h3>
+                        <p style="margin-bottom: 1.2rem; color: var(--text-secondary);">
+                            Just as DNA forms the fundamental instructions for life, code forms the building blocks of
+                            the digital realm. I specialize in building projects that transcend typical static user
+                            interfaces, focusing on dynamic interaction.
+                        </p>
+                        <p style="margin-bottom: 1.2rem; color: var(--text-secondary);">
+                            Whether it's custom mathematical particle canvases, advanced WebGL models, or smooth
+                            physics-based animations, my aim is to make visitors feel engaged and immersed. Every design
+                            is calculated down to the pixel.
+                        </p>
+                        <p style="color: var(--text-secondary);">
+                            I focus on clean architecture, performance optimization, and custom-tailored designs,
+                            ensuring that animations do not compromise speed or loading times.
+                        </p>
+                    </div>
+
+                    <div class="skills-wrapper">
+                        <div class="skills-category glass-card reveal">
+                            <h4>Frontend Forge</h4>
+                            <div class="skills-grid">
+                                <div class="skill-badge"><i class="fa-brands fa-html5" style="color: #e34c26;"></i>
+                                    HTML5</div>
+                                <div class="skill-badge"><i class="fa-brands fa-css3-alt" style="color: #264de4;"></i>
+                                    CSS3</div>
+                                <div class="skill-badge"><i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+                                    JavaScript</div>
+                                <div class="skill-badge"><i class="fa-brands fa-react" style="color: #61dbfb;"></i>
+                                    React.js</div>
+                                <div class="skill-badge"><i class="fa-brands fa-sass" style="color: #cc6699;"></i> SCSS
+                                </div>
+                                <div class="skill-badge"><i class="fa-solid fa-code"></i> Next.js</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category glass-card reveal">
+                            <h4>Backends & Tools</h4>
+                            <div class="skills-grid">
+                                <div class="skill-badge"><i class="fa-brands fa-node-js" style="color: #68a063;"></i>
+                                    Node.js</div>
+                                <div class="skill-badge"><i class="fa-solid fa-database" style="color: #4db33d;"></i>
+                                    MongoDB</div>
+                                <div class="skill-badge"><i class="fa-brands fa-git-alt" style="color: #f1502f;"></i>
+                                    Git & GitHub</div>
+                                <div class="skill-badge"><i class="fa-solid fa-terminal"></i> GraphQL</div>
+                                <div class="skill-badge"><i class="fa-solid fa-server"></i> REST APIs</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category glass-card reveal">
+                            <h4>Visuals & Motion</h4>
+                            <div class="skills-grid">
+                                <div class="skill-badge"><i class="fa-solid fa-palette"></i> Canvas 2D</div>
+                                <div class="skill-badge"><i class="fa-solid fa-cubes"></i> Three.js / WebGL</div>
+                                <div class="skill-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> GSAP</div>
+                                <div class="skill-badge"><i class="fa-solid fa-compass-drafting"></i> Figma</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-num">02 / PORTFOLIO</span>
+                    <h2 class="section-title">Selected Creations</h2>
+                </div>
+
+                <div class="project-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="creative">Creative</button>
+                    <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card-wrapper reveal" data-category="creative">
+                        <div class="project-card glass-card">
+                            <div>
+                                <div class="project-header">
+                                    <div class="project-icon"><i class="fa-solid fa-helix"></i></div>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" aria-label="GitHub"><i
+                                                class="fa-brands fa-github"></i></a>
+                                        <a href="#" class="project-link" aria-label="Live Demo"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">Helix Engine</h3>
+                                <p class="project-desc">A custom procedural graphics generator rendering organic systems
+                                    dynamically inside the web canvas.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5 Canvas</span>
+                                <span class="project-tag">GSAP</span>
+                                <span class="project-tag">Math.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card-wrapper reveal" data-category="fullstack">
+                        <div class="project-card glass-card">
+                            <div>
+                                <div class="project-header">
+                                    <div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" aria-label="GitHub"><i
+                                                class="fa-brands fa-github"></i></a>
+                                        <a href="#" class="project-link" aria-label="Live Demo"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">Nexus Portal</h3>
+                                <p class="project-desc">Fullstack secure decentralization dashboard for coordinating
+                                    assets and smart contract APIs.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">Web3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card-wrapper reveal" data-category="frontend">
+                        <div class="project-card glass-card">
+                            <div>
+                                <div class="project-header">
+                                    <div class="project-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" aria-label="GitHub"><i
+                                                class="fa-brands fa-github"></i></a>
+                                        <a href="#" class="project-link" aria-label="Live Demo"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">Aether UI</h3>
+                                <p class="project-desc">A glassmorphic, design-system library optimized for lightning
+                                    fast page loads and smooth layout shifts.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">CSS3 Variables</span>
+                                <span class="project-tag">Vanilla JS</span>
+                                <span class="project-tag">SEO Optimized</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card-wrapper reveal" data-category="frontend">
+                        <div class="project-card glass-card">
+                            <div>
+                                <div class="project-header">
+                                    <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" aria-label="GitHub"><i
+                                                class="fa-brands fa-github"></i></a>
+                                        <a href="#" class="project-link" aria-label="Live Demo"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">Quantum Dashboard</h3>
+                                <p class="project-desc">Real-time analytical graphs rendering network traffic vectors
+                                    dynamically using SVG canvas.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">D3.js</span>
+                                <span class="project-tag">TypeScript</span>
+                                <span class="project-tag">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card-wrapper reveal" data-category="creative">
+                        <div class="project-card glass-card">
+                            <div>
+                                <div class="project-header">
+                                    <div class="project-icon"><i class="fa-solid fa-sliders"></i></div>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" aria-label="GitHub"><i
+                                                class="fa-brands fa-github"></i></a>
+                                        <a href="#" class="project-link" aria-label="Live Demo"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">Synthetix</h3>
+                                <p class="project-desc">Interactive browser-based audio workstation converting mouse
+                                    coordinates into synth harmonics.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Web Audio API</span>
+                                <span class="project-tag">Canvas</span>
+                                <span class="project-tag">GSAP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card-wrapper reveal" data-category="fullstack">
+                        <div class="project-card glass-card">
+                            <div>
+                                <div class="project-header">
+                                    <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link" aria-label="GitHub"><i
+                                                class="fa-brands fa-github"></i></a>
+                                        <a href="#" class="project-link" aria-label="Live Demo"><i
+                                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                    </div>
+                                </div>
+                                <h3 class="project-title">Nova Commerce</h3>
+                                <p class="project-desc">Fast eCommerce gateway featuring floating 3D product preview
+                                    nodes and stripe integration.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Next.js</span>
+                                <span class="project-tag">Stripe</span>
+                                <span class="project-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-num">03 / EXPERIENCE</span>
+                    <h2 class="section-title">Timeline</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-date">2025 - PRESENT</div>
+                            <h3 class="timeline-role">Lead Interactive Engineer</h3>
+                            <span class="timeline-company">Genesis Labs</span>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Designing fully immersive 3D interfaces and WebGL visual pipelines. Restructured core
+                                components, increasing front-end rendering efficiency by 40%.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-date">2023 - 2025</div>
+                            <h3 class="timeline-role">Full Stack Developer</h3>
+                            <span class="timeline-company">SynthMedia</span>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Spearheaded creation of customizable dashboards and user interfaces. Developed
+                                Node/Express microservices handling upwards of 5 million requests daily.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-date">2021 - 2023</div>
+                            <h3 class="timeline-role">Frontend UI Architect</h3>
+                            <span class="timeline-company">Nebula Design</span>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Hand-crafted premium styling structures, components, and interaction scripts. Guided
+                                design systems implementation across multi-platform dashboards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-num">04 / CONTACT</span>
+                    <h2 class="section-title">Initiate Connection</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <div class="contact-method">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h4>E-mail</h4>
+                                <p>vickyplayground@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Tamil Nadu, IND</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="contact-details">
+                                <h4>Current Time</h4>
+                                <p id="local-time">--:--:-- GMT</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper glass-card reveal">
+                        <form class="contact-form" id="contact-form"
+                            action="https://formsubmit.co/vickyplayground@gmail.com" method="POST">
+                            <!-- FormSubmit config -->
+                            <input type="hidden" name="_subject" value="New message from SIKE Portfolio">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="text" name="_honey" style="display:none">
+
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-control" placeholder=" " required
+                                    autocomplete="off">
+                                <label for="name" class="form-label">Full Name</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-control" placeholder=" "
+                                    required autocomplete="off">
+                                <label for="email" class="form-label">Email Address</label>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="message" name="message" class="form-control" placeholder=" "
+                                    required></textarea>
+                                <label for="message" class="form-label">Message</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary form-btn" id="form-submit-btn">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-text">
+                &copy; <span id="current-year">2026</span> SIKE Portfolio. All rights reserved. Code is art.
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="social-link" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Logic Scripts -->
+    <script src="dna-background.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
