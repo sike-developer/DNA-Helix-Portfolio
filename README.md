@@ -39,14 +39,14 @@ A high-performance, glassmorphic developer portfolio merging genetic algorithmic
 
 ````
 
-2.  **Navigate to Directory**
+2. **Navigate to Directory**
     
     ``` bash
     cd dna-helix-portfolio
     
-    ````
+    ```
 
-3.  **Launch**
+3. **Launch**
     Open `index.html` in your browser or use a Live Server extension in VS Code.
 
 -----
